@@ -18,7 +18,7 @@ public:
     }
 };
 
-fruit::Component<Greeter> getModule2Component() {
+fruit::Component<Module2> getModule2Component() {
     return fruit::createComponent()
         .bind<Module1, Module1Impl>()
         .bind<Module2, Module2Impl>();
