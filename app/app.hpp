@@ -5,4 +5,4 @@
 
 #include "sound.hpp"
 
-extern fruit::Component<Sound> getAppComponent();
+extern fruit::Component<inexor::sound::Sound> getAppComponent();

@@ -5,8 +5,8 @@
 
 
 int main() {
-    fruit::Injector<Sound> injector(getAppComponent);
-    Sound* sound = injector.get<Sound*>();
+    fruit::Injector<inexor::sound::Sound> injector(getAppComponent);
+    inexor::sound::Sound* sound = injector.get<inexor::sound::Sound*>();
     sound->doSomething();
     return 0;
 }

@@ -3,4 +3,10 @@
 #include "sound.hpp"
 #include "logger.hpp"
 
-extern fruit::Component<fruit::Required<Logger>, Sound> getOpenAlSoundComponent();
+namespace inexor {
+namespace sound {
+
+extern fruit::Component<fruit::Required<inexor::util::Logger>, Sound> getOpenAlSoundComponent();
+
+}
+}

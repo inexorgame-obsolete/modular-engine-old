@@ -5,8 +5,8 @@
 #include "spd_logger.hpp"
 #include "openal_sound.hpp"
 
-fruit::Component<Sound> getAppComponent() {
+fruit::Component<inexor::sound::Sound> getAppComponent() {
     return fruit::createComponent()
-        .install(getSpdLoggerComponent)
-        .install(getOpenAlSoundComponent);
+        .install(inexor::util::getSpdLoggerComponent)
+        .install(inexor::sound::getOpenAlSoundComponent);
 }

@@ -3,6 +3,9 @@
 
 #include "spd_logger.hpp"
 
+namespace inexor {
+namespace util {
+
 class SpdLogger : public Logger {
 public:
     INJECT(SpdLogger()) = default;
@@ -12,8 +15,10 @@ public:
     }
 };
 
-
 fruit::Component<Logger> getSpdLoggerComponent() {
     return fruit::createComponent()
             .bind<Logger, SpdLogger>();
+}
+
+}
 }
