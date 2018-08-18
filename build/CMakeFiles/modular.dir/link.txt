@@ -1,1 +1,0 @@
-/usr/bin/c++   -m64 -g  -rdynamic CMakeFiles/modular.dir/tutorial_1.cpp.o  -o bin/modular /home/malte/.conan/data/fruit/3.2.0/inexorgame/stable/package/25e4462452b2782a168076cf14823c8bc43713fe/lib/libfruit.a 

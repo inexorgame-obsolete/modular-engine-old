@@ -1,3 +1,0 @@
-/home/malte/Dokumente/modular-engine/build/CMakeFiles/rebuild_cache.dir
-/home/malte/Dokumente/modular-engine/build/CMakeFiles/edit_cache.dir
-/home/malte/Dokumente/modular-engine/build/CMakeFiles/modular.dir
