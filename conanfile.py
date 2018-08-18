@@ -8,7 +8,10 @@ class modularConan(ConanFile):
     url = "https://github.com/inexorgame/inexor-core.git"
     settings = "os", "compiler", "build_type", "arch"
 
-    requires = ("fruit/3.2.0@inexorgame/stable")
+    requires = ("fruit/[~=3.2]@inexorgame/stable",
+                "spdlog/[~=0.14]@bincrafters/stable",
+                "openal/[~=1.18]@bincrafters/stable"
+                )
     generators = "cmake"
 
     def build(self):
