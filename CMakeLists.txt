@@ -19,7 +19,7 @@ if(${MAINDIR} STREQUAL ${BINDIR})
 endif()
 
 include_directories("googlefruit/include")
-set(sources "tutorial_1.cpp")
+set(sources "main.cpp" "module1.cpp" "module2.cpp")
 add_executable(${PROJECT_NAME} ${sources} ${ALL_HEADERS})
 
 target_link_libraries(${PROJECT_NAME} CONAN_PKG::fruit)
