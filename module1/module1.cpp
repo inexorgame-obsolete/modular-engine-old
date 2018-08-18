@@ -1,5 +1,6 @@
 #include <fruit/fruit.h>
 #include <iostream>
+
 #include "module1.hpp"
 
 class Module1Impl : public Module1 {

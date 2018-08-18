@@ -4,13 +4,7 @@
 #include "module1.hpp"
 #include "module2.hpp"
 
-//class Module2 {
-//public:
-//    virtual void greet() = 0;
-//};
-
 class Module2Impl : public Module2 {
-
 private:
 	Module1* module1;
 
@@ -23,3 +17,9 @@ public:
     	module1->write("Hello world!\n");
     }
 };
+
+fruit::Component<Greeter> getModule2Component() {
+    return fruit::createComponent()
+        .bind<Module1, Module1Impl>()
+        .bind<Module2, Module2Impl>();
+}
