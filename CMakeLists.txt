@@ -18,7 +18,7 @@ if(${MAINDIR} STREQUAL ${BINDIR})
     message(FATAL_ERROR "Keep your directories clean, don't generate the project-files in the main directory! ${MAINDIR} ${BINDIR}")
 endif()
 
-include_directories("googlefruit/include")
+include_directories("googlefruit/include" "module1" "module2")
 set(sources "main.cpp" "module1/module1.cpp" "module2/module2.cpp")
 add_executable(${PROJECT_NAME} ${sources} ${ALL_HEADERS})
 
