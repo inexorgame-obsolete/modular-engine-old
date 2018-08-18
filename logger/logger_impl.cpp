@@ -1,7 +1,7 @@
 #include <fruit/fruit.h>
 #include <iostream>
 
-#include "logger.hpp"
+#include "logger_impl.hpp"
 
 class LoggerImpl : public Logger {
 public:
@@ -13,7 +13,7 @@ public:
 };
 
 
-fruit::Component<Logger> getLoggerComponent() {
+fruit::Component<Logger> getLoggerImplComponent() {
     return fruit::createComponent()
             .bind<Logger, LoggerImpl>();
 }

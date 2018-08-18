@@ -1,8 +1,7 @@
 #include <fruit/fruit.h>
 #include <iostream>
 
-#include "logger.hpp"
-#include "sound.hpp"
+#include "sound_impl.hpp"
 
 class SoundImpl : public Sound {
 private:
@@ -16,8 +15,7 @@ public:
     }
 };
 
-
-fruit::Component<Sound> getSoundComponent() {
+fruit::Component<fruit::Required<Logger>, Sound> getSoundImplComponent() {
     return fruit::createComponent()
             .bind<Sound, SoundImpl>();
 }
