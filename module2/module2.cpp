@@ -17,3 +17,9 @@ public:
     	module1->write("Hello world!\n");
     }
 };
+
+
+fruit::Component<Module2> getModule2Component() {
+    return fruit::createComponent()
+            .bind<Module2, Module2Impl>();
+}

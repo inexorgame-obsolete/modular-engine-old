@@ -2,15 +2,8 @@
 #include <iostream>
 
 #include "module1/module1.hpp"
-#include "module1/module1.cpp"
 #include "module2/module2.hpp"
-#include "module2/module2.cpp"
 
-fruit::Component<Module2> getModule2Component() {
-    return fruit::createComponent()
-        .bind<Module1, Module1Impl>()
-        .bind<Module2, Module2Impl>();
-}
 
 int main() {
     fruit::Injector<Module2> injector(getModule2Component);

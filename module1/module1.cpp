@@ -11,3 +11,9 @@ public:
       std::cout << s;
     }
 };
+
+
+fruit::Component<Module1> getModule1Component() {
+    return fruit::createComponent()
+            .bind<Module1, Module1Impl>();
+}

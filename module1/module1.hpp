@@ -9,3 +9,5 @@ public:
     virtual void write(std::string s) = 0;
 
 };
+
+extern fruit::Component<Module1> getModule1Component();
