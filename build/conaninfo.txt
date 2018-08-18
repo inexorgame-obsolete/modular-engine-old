@@ -1,0 +1,33 @@
+[settings]
+    arch=x86_64
+    build_type=Debug
+    compiler=gcc
+    compiler.libcxx=libstdc++11
+    compiler.version=5.4
+    os=Linux
+
+[requires]
+    fruit/3.Y.Z
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    build_type=Debug
+    compiler=gcc
+    compiler.libcxx=libstdc++11
+    compiler.version=5.4
+    os=Linux
+
+[full_requires]
+    fruit/3.2.0@inexorgame/stable:25e4462452b2782a168076cf14823c8bc43713fe
+
+[full_options]
+    fruit:shared=False
+
+[recipe_hash]
+
+
+[env]
+

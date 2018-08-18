@@ -1,12 +1,15 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.2)
+
+set(PROJECT_NAME "modular")
 
 # Project Name and start working in project scope (some things just work until now, some just work after this command)
-project(modular)
+project(${PROJECT_NAME})
 
 # Add conan dependencies (our c++ dependency manager)
-#include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-#conan_basic_setup(TARGETS)
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
 
+set(CMAKE_CXX_STANDARD 14)
 
 # Error if paths aren't set well
 get_filename_component(MAINDIR "${CMAKE_SOURCE_DIR}" REALPATH)  # Main inexor folder
@@ -15,6 +18,9 @@ if(${MAINDIR} STREQUAL ${BINDIR})
     message(FATAL_ERROR "Keep your directories clean, don't generate the project-files in the main directory! ${MAINDIR} ${BINDIR}")
 endif()
 
-set(sources "tutorial_1.c")
-add_executable(modular ${sources} ${ALL_HEADERS})
+include_directories("googlefruit/include")
+set(sources "tutorial_1.cpp")
+add_executable(${PROJECT_NAME} ${sources} ${ALL_HEADERS})
+
+target_link_libraries(${PROJECT_NAME} CONAN_PKG::fruit)
 
