@@ -22,5 +22,5 @@ include_directories("googlefruit/include" "app" "logger" "logger/spdlogger" "sou
 set(sources "main.cpp" "app/app.cpp" "sound/openal/openal_sound.cpp" "logger/spdlogger/spd_logger.cpp")
 add_executable(${PROJECT_NAME} ${sources} ${ALL_HEADERS})
 
-target_link_libraries(${PROJECT_NAME} CONAN_PKG::fruit)
+target_link_libraries(${PROJECT_NAME} CONAN_PKG::fruit CONAN_PKG::spdlog)
 
