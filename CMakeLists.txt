@@ -19,7 +19,7 @@ if(${MAINDIR} STREQUAL ${BINDIR})
 endif()
 
 include_directories("googlefruit/include" "app" "logger" "sound")
-set(sources "main.cpp" "app/app.cpp" "sound/sound_impl.cpp" "logger/logger_impl.cpp")
+set(sources "main.cpp" "app/app.cpp" "sound/openal_sound.cpp" "logger/spd_logger.cpp")
 add_executable(${PROJECT_NAME} ${sources} ${ALL_HEADERS})
 
 target_link_libraries(${PROJECT_NAME} CONAN_PKG::fruit)

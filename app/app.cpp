@@ -2,11 +2,11 @@
 #include <iostream>
 
 #include "app.hpp"
-#include "logger_impl.hpp"
-#include "sound_impl.hpp"
+#include "spd_logger.hpp"
+#include "openal_sound.hpp"
 
 fruit::Component<Sound> getAppComponent() {
     return fruit::createComponent()
-        .install(getLoggerImplComponent)
-        .install(getSoundImplComponent);
+        .install(getSpdLoggerComponent)
+        .install(getOpenAlSoundComponent);
 }
