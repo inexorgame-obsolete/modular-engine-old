@@ -8,7 +8,7 @@ private:
 	Logger* logger;
 
 public:
-    INJECT(SoundImpl()) = default;
+    INJECT(SoundImpl(Logger *logger)) : logger(logger) {}
 
     virtual void doSomething() override {
     	logger->write("Hello world!\n");
