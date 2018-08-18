@@ -18,8 +18,8 @@ if(${MAINDIR} STREQUAL ${BINDIR})
     message(FATAL_ERROR "Keep your directories clean, don't generate the project-files in the main directory! ${MAINDIR} ${BINDIR}")
 endif()
 
-include_directories("googlefruit/include" "module1" "module2")
-set(sources "main.cpp" "module1/module1.cpp" "module2/module2.cpp")
+include_directories("googlefruit/include" "logger" "sound")
+set(sources "main.cpp" "sound/sound.cpp" "logger/logger.cpp")
 add_executable(${PROJECT_NAME} ${sources} ${ALL_HEADERS})
 
 target_link_libraries(${PROJECT_NAME} CONAN_PKG::fruit)

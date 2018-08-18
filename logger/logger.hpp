@@ -3,11 +3,11 @@
 
 #pragma once
 
-class Module1 {
+class Logger {
 
 public:
     virtual void write(std::string s) = 0;
 
 };
 
-extern fruit::Component<Module1> getModule1Component();
+extern fruit::Component<Logger> getLoggerComponent();

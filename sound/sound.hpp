@@ -3,10 +3,10 @@
 
 #pragma once
 
-class Module2 {
+class Sound {
 
 public:
     virtual void doSomething() = 0;
 
 };
-extern fruit::Component<Module2> getModule2Component();
+extern fruit::Component<Sound> getSoundComponent();
