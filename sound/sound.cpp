@@ -19,5 +19,5 @@ public:
 
 fruit::Component<Sound> getSoundComponent() {
     return fruit::createComponent()
-            .install(getLoggerComponent);
+            .bind<Sound, SoundImpl>();
 }
