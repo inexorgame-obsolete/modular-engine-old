@@ -25,10 +25,10 @@ endif()
 set(CMAKE_CXX_STANDARD 14)
 
 # Dep management
-include_directories("googlefruit/include" "app" "logger" "logger/spdlogger" "sound" "sound/openal")
+include_directories("googlefruit/include" "app" "logger" "logger/nulllogger" "logger/spdlogger" "sound" "sound/openal")
 
 
-set(sources "main.cpp" "app/app.cpp" "sound/openal/openal_sound.cpp" "logger/spdlogger/spd_logger.cpp")
+set(sources "main.cpp" "app/app.cpp" "sound/openal/openal_sound.cpp" "logger/nulllogger/null_logger.cpp" "logger/spdlogger/spd_logger.cpp")
 add_executable(${PROJECT_NAME} ${sources} ${ALL_HEADERS})
 
 # Dep management
