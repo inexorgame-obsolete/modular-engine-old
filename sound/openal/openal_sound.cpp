@@ -14,7 +14,7 @@ public:
     INJECT(OpenAlSound(inexor::util::Logger *logger)) : logger(logger) {}
 
     virtual void doSomething() override {
-    	logger->write("Hello world!\n");
+    	logger->info("Hello world!\n");
     }
 };
 

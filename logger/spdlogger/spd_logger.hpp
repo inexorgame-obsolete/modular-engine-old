@@ -31,6 +31,8 @@
 namespace inexor {
 namespace util {
 
+#define DEFAULT_LOG_PATTERN "%H:%M:%S [%n] [%l] %v"
+
 extern fruit::Component<Logger> getSpdLoggerComponent();
 
 }
