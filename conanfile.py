@@ -11,7 +11,8 @@ class modularConan(ConanFile):
     requires = ("fruit/[~=3.2]@inexorgame/stable",
                 "fmt/[~=4.1]@bincrafters/stable",
                 "spdlog/[~=0.14]@bincrafters/stable",
-                "openal/[~=1.18]@bincrafters/stable")
+                "openal/[~=1.18]@bincrafters/stable",
+                "gtest/[~1.8.0]@bincrafters/stable")
 
     default_options = "spdlog:fmt_external=True"
     generators = "cmake"
