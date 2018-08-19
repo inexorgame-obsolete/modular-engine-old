@@ -1,5 +1,5 @@
 set(TEST_BINARY unit_tests CACHE INTERNAL "")
-set(sources "main.cpp")
+set(sources "unit_tests.cpp")
 
 # This needs to come before the target, sigh
 link_directories(${GTEST_LIB_DIR})
