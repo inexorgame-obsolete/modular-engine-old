@@ -32,3 +32,6 @@ class modularConan(ConanFile):
         self.copy("*.dat", dst="bin", src="bin")  # From bin to bin
         self.copy("*.pak", dst="bin", src="bin")  # From bin to bin
 
+    def test(self):
+
+        pass

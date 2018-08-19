@@ -33,3 +33,4 @@ add_executable(${PROJECT_NAME} ${sources} ${ALL_HEADERS})
 
 # Dep management
 target_link_libraries(${PROJECT_NAME} CONAN_PKG::fruit CONAN_PKG::spdlog)
+add_subdirectory(unit_tests)
