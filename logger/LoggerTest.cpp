@@ -10,12 +10,12 @@ Logger* logger = injector.get<Logger*>();
 
 TEST(LoggerTest, getLevel)
 {
-    EXPECT_EQ(logger->getLevel(), 0);
+    EXPECT_EQ(logger->getLevel(), level::trace);
 }
 
 TEST(LoggerTest, setLevel)
 {
-    logger->setLevel(2);
-    EXPECT_EQ(logger->getLevel(), 2);
+    logger->setLevel(level::info);
+    EXPECT_EQ(logger->getLevel(), level::info);
 }
 
