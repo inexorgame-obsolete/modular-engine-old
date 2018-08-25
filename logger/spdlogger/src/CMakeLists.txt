@@ -6,10 +6,10 @@ include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS NO_OUTPUT_DIRS)
 
 set(CMAKE_CXX_STANDARD 14)
-include_directories("../..")
+include_directories("../../..")
 
 add_library(spdlogger 
   "spd_logger.cpp")
 
-target_link_libraries(spdlogger ${CONAN_LIBS})
+target_link_libraries(spdlogger CONAN_PKG::fruit CONAN_PKG::spdlog)
 
