@@ -7,22 +7,22 @@ Use
 `conan export googlefruit inexorgame/stable`
 to create a google fruit package.
 
-Afterwards create a build folder and change into that folder.
+Afterwards use the new experimental conan feature [workspaces](https://docs.conan.io/en/latest/developing_packages/workspaces.html):a solution to work on different conan packages in the same *workspace*.
 
-`mkdir build && cd build`
+Therefore resolve all dependencies (in the workspace)
 
-Then install the dependencies with
+`conan install . -if=build`
 
-`conan install .. --build missing`
-
-and build it with
-
-`conan build ..`
-
-Then execute it with
-
-`cd bin`
-
-`./modular`
+Afterwards build it by changing into the build directory and executing cmake.
 
 
+`cd build && cmake .. && cmake --build .`
+
+Then execute `app` with
+
+`cd app`
+
+`./app`
+
+
+*You should see `Hello World` in the console here*
