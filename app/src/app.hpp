@@ -3,6 +3,6 @@
 #include <fruit/fruit.h>
 #include <iostream>
 
-#include "sound.hpp"
+#include "sound/sound.hpp"
 
 extern fruit::Component<inexor::sound::Sound> getAppComponent();

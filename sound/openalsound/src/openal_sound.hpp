@@ -1,7 +1,7 @@
 #pragma once
 
-#include "sound.hpp"
-#include "logger.hpp"
+#include "sound/sound.hpp"
+#include "logger/logger.hpp"
 
 namespace inexor {
 namespace sound {

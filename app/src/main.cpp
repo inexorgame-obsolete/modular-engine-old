@@ -1,7 +1,7 @@
 #include <fruit/fruit.h>
 #include <iostream>
 
-#include "app/app.hpp"
+#include "app.hpp"
 
 
 int main() {

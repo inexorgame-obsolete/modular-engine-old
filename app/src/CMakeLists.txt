@@ -9,6 +9,8 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories("../..")
 
 add_executable(app app.cpp main.cpp)
-target_link_libraries(app ${CONAN_LIBS})
+target_link_libraries(app CONAN_PKG::fruit
+                          CONAN_PKG::spdlogger
+                          CONAN_PKG::openalsound)
 
 

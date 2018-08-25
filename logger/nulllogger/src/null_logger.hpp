@@ -1,6 +1,6 @@
 #pragma once
 
-#include "logger.hpp"
+#include "logger/logger.hpp"
 
 namespace inexor {
 namespace util {

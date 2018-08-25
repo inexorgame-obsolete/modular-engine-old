@@ -6,10 +6,10 @@ include(${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS NO_OUTPUT_DIRS)
 
 set(CMAKE_CXX_STANDARD 14)
-include_directories("../..")
+include_directories("../../..")
 
 add_library(openalsound 
   "openal_sound.cpp")
 
-target_link_libraries(openalsound ${CONAN_LIBS})
+target_link_libraries(openalsound CONAN_PKG::fruit CONAN_PKG::openal)
 
