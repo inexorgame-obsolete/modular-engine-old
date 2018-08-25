@@ -1,0 +1,19 @@
+spdlogger:
+    folder: logger/spdlogger
+    includedirs: src
+    cmakedir: src
+nulllogger:
+    folder: logger/nulllogger
+    includedirs: src
+    cmakedir: src
+openalsound:
+    folder: sound/openalsound
+    cmakedir: src
+app:
+    folder: app
+    includedirs: src
+    cmakedir: src
+
+root: app
+generator: cmake
+name: modular_engine
