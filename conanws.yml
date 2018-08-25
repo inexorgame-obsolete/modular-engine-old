@@ -8,6 +8,7 @@ nulllogger:
     cmakedir: src
 openalsound:
     folder: sound/openalsound
+    includedirs: src
     cmakedir: src
 app:
     folder: app

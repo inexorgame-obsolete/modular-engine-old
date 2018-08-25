@@ -1,7 +1,10 @@
 from conans import ConanFile, CMake
 class Pkg(ConanFile):
     settings = "os", "compiler", "arch", "build_type"
-    requires = ("fruit/[~=3.2]@inexorgame/stable")
+    requires = ("openalsound/0.1@user/testing",
+                "spdlogger/0.1@user/testing",
+                "nulllogger/0.1@user/testing",
+                "fruit/[~=3.2]@inexorgame/stable")
     generators = "cmake"
     exports_sources = "src/*"
 
