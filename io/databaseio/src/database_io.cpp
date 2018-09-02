@@ -31,7 +31,7 @@ public:
     virtual void set(int key, int value) override {
         /* Insert some key/value pairs in a write transaction: */
       auto wtxn = lmdb::txn::begin(env);
-      auto dbi = lmdb::dbi::open(wtxn, nullptr);
+      auto dbi = lmdb::dbi::open(wtxn, "testdb");
       dbi.put(wtxn, "username", "jhacker");
       dbi.put(wtxn, "email", "jhacker@example.org");
       dbi.put(wtxn, "fullname", "J. Random Hacker");
