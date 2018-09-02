@@ -11,6 +11,6 @@ fruit::Component<inexor::sound::Sound> getAppComponent() {
     return fruit::createComponent()
         .install(inexor::util::getSpdLoggerComponent)
         // .install(inexor::util::getNullLoggerComponent)
-        .install(inexor::sound::getOpenAlSoundComponent);
+        .install(inexor::sound::getOpenAlSoundComponent)
         .install(inexor::io::getDatabaseIoComponent);
 }

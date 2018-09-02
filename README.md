@@ -19,7 +19,7 @@ Afterwards use the new experimental conan feature [workspaces](https://docs.cona
 
 Therefore resolve all dependencies (in the workspace)
 
-`conan install . -if=build`
+`conan install . -if=build --build missing`
 
 Afterwards build it by changing into the build directory and executing cmake.
 

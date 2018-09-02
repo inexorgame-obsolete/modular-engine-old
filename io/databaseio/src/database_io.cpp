@@ -11,9 +11,9 @@ public:
     INJECT(DatabaseIO()) = default;
   
     /// The log pattern
-    std::string key;
+    int key;
     /// The log pattern
-    std::string value;
+    int value;
 
 
     virtual int get(int key) override {
@@ -26,7 +26,7 @@ public:
 
 };
 
-fruit::Component<Logger> getDatabaseIoComponent() {
+fruit::Component<IO> getDatabaseIoComponent() {
     return fruit::createComponent()
             .bind<IO, DatabaseIO>();
 }

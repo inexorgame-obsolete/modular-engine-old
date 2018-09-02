@@ -1,11 +1,11 @@
 #pragma once
 
-#include "logger/logger.hpp"
+#include "io/io.hpp"
 
 namespace inexor {
 namespace io {
 
-extern fruit::Component<Logger> getDatabaseIoComponent();
+extern fruit::Component<IO> getDatabaseIoComponent();
 
 }
 }
