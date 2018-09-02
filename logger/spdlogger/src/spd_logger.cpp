@@ -1,7 +1,10 @@
+#include "spd_logger.hpp"
+
+#include <spdlog/spdlog.h>
+#include <spdlog/fmt/ostr.h>
+
 #include <fruit/fruit.h>
 #include <iostream>
-
-#include "spd_logger.hpp"
 
 namespace inexor {
 namespace util {
