@@ -1,5 +1,6 @@
 #pragma once
 
+#include <fruit/fruit.h>
 #include "io/io.hpp"
 
 namespace inexor {

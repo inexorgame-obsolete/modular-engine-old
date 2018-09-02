@@ -11,5 +11,5 @@ include_directories("../../..")
 add_library(databaseio 
   "database_io.cpp")
 
-target_link_libraries(databaseio CONAN_PKG::fruit CONAN_PKG::lmdb)
+target_link_libraries(databaseio CONAN_PKG::fruit CONAN_PKG::lmdbxx)
 
