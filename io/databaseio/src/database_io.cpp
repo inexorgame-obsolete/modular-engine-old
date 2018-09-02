@@ -16,7 +16,7 @@ public:
     INJECT(DatabaseIO()) : env(lmdb::env::create())
     {
         // Create and open the LMDB environment
-        env.set_mapsize(1UL * 1024UL * 1024UL * 1024UL); // 1 GB
+        env.set_mapsize(1UL * 1024UL * 1024UL); // 1 MB
         env.open("./example.mdb", 0, 0664);
         string comp = get("component");
         if (comp == "flex")
