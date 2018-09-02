@@ -7,6 +7,10 @@ Use
 `conan export googlefruit inexorgame/stable`
 to create a google fruit package.
 
+Then use
+`conan export lmdb inexorgame/testing`
+to create a LMDB package.
+
 Afterwards use the new experimental conan feature [workspaces](https://docs.conan.io/en/latest/developing_packages/workspaces.html):a solution to work on different conan packages in the same *workspace*.
 
 Therefore resolve all dependencies (in the workspace)

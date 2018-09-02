@@ -2,7 +2,7 @@ from conans import ConanFile, CMake
 class Pkg(ConanFile):
     settings = "os", "compiler", "arch", "build_type"
     requires = ("fruit/[~=3.2]@inexorgame/stable",
-                "lmdb/[~=0.9]@sunside/stable")
+                "lmdb/[~=0.9]@inexorgame/testing")
     generators = "cmake"
     exports_sources = "src/*"
 
