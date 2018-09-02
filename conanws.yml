@@ -10,6 +10,10 @@ openalsound:
     folder: sound/openalsound
     includedirs: src
     cmakedir: src
+databaseio:
+    folder: io/databaseio
+    includedirs: src
+    cmakedir: src
 app:
     folder: app
     includedirs: src

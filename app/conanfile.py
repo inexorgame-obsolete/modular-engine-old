@@ -4,6 +4,7 @@ class Pkg(ConanFile):
     requires = ("openalsound/0.1@user/testing",
                 "spdlogger/0.1@user/testing",
                 "nulllogger/0.1@user/testing",
+                "databaseio/0.1@user/testing",
                 "fruit/[~=3.2]@inexorgame/stable")
     generators = "cmake"
     exports_sources = "src/*"

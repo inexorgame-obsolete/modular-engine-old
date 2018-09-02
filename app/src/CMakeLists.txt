@@ -11,6 +11,7 @@ include_directories("../..")
 add_executable(app app.cpp main.cpp)
 target_link_libraries(app CONAN_PKG::fruit
                           CONAN_PKG::spdlogger
+                          CONAN_PKG::databaseio
                           CONAN_PKG::openalsound)
 
 
