@@ -7,7 +7,8 @@
 #include "sound/openalsound/src/openal_sound.hpp"
 #include "io/databaseio/src/database_io.hpp"
 
-fruit::Component<inexor::sound::Sound> getAppComponent() {
+
+fruit::Component<inexor::io::IO> getAppComponent() {
     return fruit::createComponent()
         .install(inexor::util::getSpdLoggerComponent)
         // .install(inexor::util::getNullLoggerComponent)

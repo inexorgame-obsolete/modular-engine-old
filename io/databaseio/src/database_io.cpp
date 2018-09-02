@@ -17,8 +17,11 @@ public:
     {
         // Create and open the LMDB environment
         env.set_mapsize(1UL * 1024UL * 1024UL); // 1 MB
-        env.open("./example.mdb", 0, 0664);
+        env.open("/tmp/example.mdb", 0, 0664);
+        set("component", "flex");
+        std::printf("set key and comp");
         string comp = get("component");
+        std::printf("got: '%s'\n", comp.c_str());
         if (comp == "flex")
             set("component", "core");
     }
@@ -41,7 +44,7 @@ public:
     virtual void set(string key, string value) override {
         /* Insert some key/value pairs in a write transaction: */
       auto wtxn = lmdb::txn::begin(env);
-      auto dbi = lmdb::dbi::open(wtxn, "testdb");
+      auto dbi = lmdb::dbi::open(wtxn, "testdb", MDB_CREATE);
       dbi.put(wtxn, key, value);
       wtxn.commit();
     }
