@@ -14,7 +14,7 @@ class KainjowmustacheConan(ConanFile):
         self.run("git clone --branch master --depth 1 https://github.com/bendiken/lmdbxx")
 
     def package(self):
-        self.copy("lmdb++.hpp", dst="include/kainjow", src="lmdbxx")
+        self.copy("lmdb++.h", dst="include", src="lmdbxx")
 
     def package_info(self):
         self.cpp_info.includedirs = ['include']  # Ordered list of include paths
