@@ -54,11 +54,12 @@ class LightningDBCppConan(ConanFile):
         self.copy("*.exe", dst="bin", src="", keep_path=False)
 
     def package_info(self):
-        if self.settings.build_type == "Debug":
-            self.cpp_info.libs = ["lmdbd"]
-        else:
-            self.cpp_info.libs = ["lmdb"]
         if  self.settings.os == "Windows":
             self.cpp_info.libs.append("ntdll")
+            if self.settings.build_type == "Debug":
+                self.cpp_info.libs = ["lmdbd"]
+            else:
+                self.cpp_info.libs = ["lmdb"]
         else:
             self.cpp_info.libs.append("pthread")
+            self.cpp_info.libs = ["lmdb"]
